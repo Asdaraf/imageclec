@@ -12,7 +12,7 @@ const Navbar = () => {
               component="img"
               className="logo-image"
               alt="ImageClec Logo" 
-              src="/assets/logo-removebg-preview.png"
+              src="/assets/logo.png"
             />
             <Typography variant="h6" component="div" className="logo-text">
               IMAGECLEC
