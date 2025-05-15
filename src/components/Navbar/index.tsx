@@ -6,9 +6,8 @@ import './Navbar.css';
 const Navbar = () => {
   return (
     <AppBar position="static">
-      <Toolbar>
-        <div className="navbar-container">
-          <div className="logo-container">
+      <Toolbar className="navbar-container">
+        <div className="logo-container">
             <Box
               component="img"
               className="logo-image"
@@ -19,7 +18,6 @@ const Navbar = () => {
               IMAGECLEC
             </Typography>
           </div>
-        </div>
         <Box>
           <Button color="inherit" component={RouterLink} to="/">
             Inicio
