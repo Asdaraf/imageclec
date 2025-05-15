@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Container, Typography, Button, Grid, Paper, TextField, Divider, List, ListItem, ListItemButton, ListItemText } from '@mui/material';
+import { Box, Container, Typography, Button, Grid, Paper, TextField, Divider, List, ListItem, ListItemButton, ListItemText, Stack } from '@mui/material';
 import { Link as RouterLink } from 'react-router-dom';
 import { Email as EmailIcon, Phone as PhoneIcon, LocationOn as LocationOnIcon } from '@mui/icons-material';
 
@@ -17,29 +17,30 @@ const Home = () => {
       >
         <Container maxWidth="lg">
           <Grid container spacing={2}>
-            <Grid>
-
+            <Grid xs={7}>
+              <Stack>
+                <Typography variant="h2" component="h1" gutterBottom sx={{ fontWeight: '700', textAlign: 'left' }}>
+                  Conectando Centros de Salud con Ecografistas
+                </Typography>
+                <Typography variant="h5" component="h2" gutterBottom>
+                  La plataforma que facilita la conexión entre profesionales y centros médicos
+                </Typography>
+                <Button
+                  variant="contained"
+                  color="secondary"
+                  size="large"
+                  component={RouterLink}
+                  to="/register"
+                  sx={{ mt: 4, width: '15rem' }}
+                >
+                  Comenzar Ahora
+                </Button>
+              </Stack>
             </Grid>
             <Grid>
-
+              <img src="/assets/home-image.png" alt="Home" />
             </Grid>
           </Grid>
-          <Typography variant="h2" component="h1" gutterBottom sx={{ fontWeight: '700', textAlign: 'left' }}>
-            Conectando Centros de Salud con Ecografistas
-          </Typography>
-          <Typography variant="h5" component="h2" gutterBottom>
-            La plataforma que facilita la conexión entre profesionales y centros médicos
-          </Typography>
-          <Button
-            variant="contained"
-            color="secondary"
-            size="large"
-            component={RouterLink}
-            to="/register"
-            sx={{ mt: 4 }}
-          >
-            Comenzar Ahora
-          </Button>
         </Container>
       </Box>
 

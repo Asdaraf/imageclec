@@ -17,8 +17,8 @@
   height: 100px;
   width: auto;
   cursor: pointer;
-  filter: drop-shadow(10px -5px 10px rgba(0,0,0,0.6));
-  mask-image: linear-gradient(to right, transparent 4%, black 20%, black 70%, transparent 88%);
+  /*filter: drop-shadow(10px -5px 10px rgba(0,0,0,0.6));
+  mask-image: linear-gradient(to right, transparent 4%, black 20%, black 70%, transparent 88%);*/
 }
 
 .logo-text {
