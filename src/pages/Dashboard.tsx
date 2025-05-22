@@ -1,47 +1,39 @@
 import React from 'react';
-import { Box, Container, Typography, Grid, Card, CardContent, Button } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 const Dashboard = () => {
   return (
-    <Container maxWidth="lg">
-      <Box sx={{ mt: 4, mb: 4 }}>
-        <Typography variant="h4" component="h1" gutterBottom>
-          Panel de Control
-        </Typography>
-        <Grid container spacing={3}>
-          <Grid component="div" xs={12} md={6}>
-            <Card>
-              <CardContent>
-                <Typography variant="h6" gutterBottom>
-                  Perfil
-                </Typography>
-                <Typography variant="body1">
-                  Aquí podrás ver y editar tu información personal
-                </Typography>
-                <Button variant="contained" color="primary" sx={{ mt: 2 }}>
-                  Ver Perfil
-                </Button>
-              </CardContent>
-            </Card>
-          </Grid>
-          <Grid component="div" xs={12} md={6}>
-            <Card>
-              <CardContent>
-                <Typography variant="h6" gutterBottom>
-                  Oportunidades
-                </Typography>
-                <Typography variant="body1">
-                  Explora las oportunidades disponibles
-                </Typography>
-                <Button variant="contained" color="primary" sx={{ mt: 2 }}>
-                  Ver Oportunidades
-                </Button>
-              </CardContent>
-            </Card>
-          </Grid>
-        </Grid>
-      </Box>
-    </Container>
+    <div className="max-w-7xl mx-auto mt-8 mb-8 px-4">
+      <h1 className="text-3xl font-bold mb-8">Panel de Control</h1>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {/* Tarjeta Perfil */}
+        <div className="bg-white rounded-lg shadow p-6 flex flex-col">
+          <h2 className="text-xl font-semibold mb-2">Perfil</h2>
+          <p className="text-gray-600 mb-4">
+            Aquí podrás ver y editar tu información personal
+          </p>
+          <Link
+            to="/perfil"
+            className="mt-auto inline-block bg-blue-500 hover:bg-blue-400 text-white font-semibold py-2 px-6 rounded transition"
+          >
+            Ver Perfil
+          </Link>
+        </div>
+        {/* Tarjeta Oportunidades */}
+        <div className="bg-white rounded-lg shadow p-6 flex flex-col">
+          <h2 className="text-xl font-semibold mb-2">Oportunidades</h2>
+          <p className="text-gray-600 mb-4">
+            Explora las oportunidades disponibles
+          </p>
+          <Link
+            to="/oportunidades"
+            className="mt-auto inline-block bg-blue-500 hover:bg-blue-400 text-white font-semibold py-2 px-6 rounded transition"
+          >
+            Ver Oportunidades
+          </Link>
+        </div>
+      </div>
+    </div>
   );
 };
 

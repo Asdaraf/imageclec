@@ -1,472 +1,146 @@
 import React from 'react';
-import { Box, Container, Typography, Button, Grid, Paper, TextField, Divider, List, ListItem, ListItemButton, ListItemText, Stack } from '@mui/material';
-import { Link as RouterLink } from 'react-router-dom';
-import { Email as EmailIcon, Phone as PhoneIcon, LocationOn as LocationOnIcon } from '@mui/icons-material';
+import { Link } from 'react-router-dom';
 
-const Home = () => {
-  return (
-    <Box>
-      {/* Hero Section */}
-      <Box
-        sx={{
-          bgcolor: 'primary.main',
-          color: 'white',
-          py: 8,
-          textAlign: 'center',
-        }}
-      >
-        <Container maxWidth="lg">
-          <Grid container spacing={2}>
-            <Grid xs={7}>
-              <Stack>
-                <Typography variant="h2" component="h1" gutterBottom sx={{ fontWeight: '700', textAlign: 'left' }}>
-                  Conectando Centros de Salud con Ecografistas
-                </Typography>
-                <Typography variant="h5" component="h2" gutterBottom>
-                  La plataforma que facilita la conexión entre profesionales y centros médicos
-                </Typography>
-                <Button
-                  variant="contained"
-                  color="secondary"
-                  size="large"
-                  component={RouterLink}
-                  to="/register"
-                  sx={{ mt: 4, width: '15rem' }}
-                >
-                  Comenzar Ahora
-                </Button>
-              </Stack>
-            </Grid>
-            <Grid>
-              <img src="/assets/home-image.png" alt="Home" />
-            </Grid>
-          </Grid>
-        </Container>
-      </Box>
-
-      {/* Features Section */}
-      <Container maxWidth="lg" sx={{ py: 8 }}>
-        <Grid container spacing={4}>
-          <Grid component="div" xs={12} md={4}>
-            <Typography variant="h5" gutterBottom>
-              Para Centros de Salud
-            </Typography>
-            <Typography>
-              Encuentra ecografistas calificados para cubrir tus necesidades de personal
-            </Typography>
-          </Grid>
-          <Grid component="div" xs={12} md={4}>
-            <Typography variant="h5" gutterBottom>
-              Para Ecografistas
-            </Typography>
-            <Typography>
-              Encuentra oportunidades de trabajo en diferentes centros de salud
-            </Typography>
-          </Grid>
-          <Grid component="div" xs={12} md={4}>
-            <Typography variant="h5" gutterBottom>
-              Proceso Simple
-            </Typography>
-            <Typography>
-              Registro fácil, búsqueda rápida y conexión directa
-            </Typography>
-          </Grid>
-        </Grid>
-      </Container>
-      <Container maxWidth="lg" sx={{ py: 8 }}>
-        <Box sx={{ textAlign: 'center', mb: 6 }}>
-          <Typography variant="h3" component="h2" gutterBottom>
-            Nuestro Impacto
-          </Typography>
-        </Box>
-        <Grid container spacing={4} justifyContent="center">
-          <Grid item xs={12} md={4}>
-            <Box
-              sx={{
-                p: 4,
-                textAlign: 'center',
-                backgroundColor: 'rgba(255, 255, 255, 0.8)',
-                borderRadius: 2,
-                boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)',
-                transition: 'transform 0.3s ease-in-out',
-                '&:hover': {
-                  transform: 'translateY(-10px)'
-                }
-              }}
+const Home = () => (
+  <div>
+    {/* Hero Section */}
+    <section className="text-blue-900 py-16 text-center">
+      <div className="max-w-7xl mx-auto px-4">
+        <div className="grid grid-cols-3 gap-8">
+          <div className="col-span-2 flex flex-col items-start justify-between text-left">
+            <h1 className="text-7xl md:text-7xl font-black mb-4">
+              Conectando Centros de Salud con Ecografistas
+            </h1>
+            <h2 className="text-xl md:text-2xl mb-6">
+              La plataforma que facilita la conexión entre profesionales y centros médicos
+            </h2>
+            <Link
+              to="/register"
+              className="inline-block bg-blue-500 hover:bg-blue-400 text-white font-semibold py-3 px-8 rounded transition mt-4"
             >
-              <Typography 
-                variant="h2" 
-                component="div" 
-                sx={{ 
-                  color: 'primary.main',
-                  fontWeight: 'bold',
-                  mb: 2 
-                }}
-              >
-                150+
-              </Typography>
-              <Typography variant="h6" gutterBottom>
-                Tecnólogos Activos
-              </Typography>
-              <Typography variant="body1" color="text.secondary">
-                Profesionales calificados brindando servicios de calidad
-              </Typography>
-            </Box>
-          </Grid>
+              Comenzar Ahora
+            </Link>
+          </div>
+          <div className="col-span-1">
+            <img
+              src="/assets/home-image.png"
+              alt="Home"
+              className=""
+            />
+          </div>
+        </div>
+      </div>
+    </section>
 
-          <Grid item xs={12} md={4}>
-            <Box
-              sx={{
-                p: 4,
-                textAlign: 'center',
-                backgroundColor: 'rgba(255, 255, 255, 0.8)',
-                borderRadius: 2,
-                boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)',
-                transition: 'transform 0.3s ease-in-out',
-                '&:hover': {
-                  transform: 'translateY(-10px)'
-                }
-              }}
-            >
-              <Typography 
-                variant="h2" 
-                component="div" 
-                sx={{ 
-                  color: 'primary.main',
-                  fontWeight: 'bold',
-                  mb: 2 
-                }}
-              >
-                50+
-              </Typography>
-              <Typography variant="h6" gutterBottom>
-                Centros Médicos
-              </Typography>
-              <Typography variant="body1" color="text.secondary">
-                Instituciones de salud confían en nuestra red
-              </Typography>
-            </Box>
-          </Grid>
+    {/* Features Section */}
+    <section className="max-w-7xl mx-auto px-4 py-16">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+        <div className="bg-white rounded-lg shadow p-6">
+          <h3 className="text-xl font-bold mb-2">Para Centros de Salud</h3>
+          <p>Encuentra ecografistas calificados para cubrir tus necesidades de personal</p>
+        </div>
+        <div className="bg-white rounded-lg shadow p-6">
+          <h3 className="text-xl font-bold mb-2">Para Ecografistas</h3>
+          <p>Encuentra oportunidades de trabajo en diferentes centros de salud</p>
+        </div>
+        <div className="bg-white rounded-lg shadow p-6">
+          <h3 className="text-xl font-bold mb-2">Proceso Simple</h3>
+          <p>Registro fácil, búsqueda rápida y conexión directa</p>
+        </div>
+      </div>
+    </section>
 
-          <Grid item xs={12} md={4}>
-            <Box
-              sx={{
-                p: 4,
-                textAlign: 'center',
-                backgroundColor: 'rgba(255, 255, 255, 0.8)',
-                borderRadius: 2,
-                boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)',
-                transition: 'transform 0.3s ease-in-out',
-                '&:hover': {
-                  transform: 'translateY(-10px)'
-                }
-              }}
-            >
-              <Typography 
-                variant="h2" 
-                component="div" 
-                sx={{ 
-                  color: 'primary.main',
-                  fontWeight: 'bold',
-                  mb: 2 
-                }}
-              >
-                5000+
-              </Typography>
-              <Typography variant="h6" gutterBottom>
-                Exámenes Realizados
-              </Typography>
-              <Typography variant="body1" color="text.secondary">
-                Diagnósticos precisos entregados a pacientes
-              </Typography>
-            </Box>
-          </Grid>
-        </Grid>
-      </Container>
-      <Container maxWidth="lg" sx={{ py: 8 }}>
-        <Typography
-          variant="h3"
-          align="center"
-          gutterBottom
-          sx={{
-            mb: 6,
-            fontWeight: 'bold'
-          }}
-        >
-          Centros Médicos Asociados
-        </Typography>
-        <Box
-          sx={{
-            width: '100%',
-            overflow: 'hidden',
-            position: 'relative',
-            '&::before, &::after': {
-              content: '""',
-              position: 'absolute',
-              top: 0,
-              width: '100px',
-              height: '100%',
-              zIndex: 2
-            },
-            '&::before': {
-              left: 0,
-              background: 'linear-gradient(to right, white, transparent)'
-            },
-            '&::after': {
-              right: 0,
-              background: 'linear-gradient(to left, white, transparent)'
-            }
-          }}
-        >
-          <Box
-            sx={{
-              display: 'flex',
-              animation: 'scroll 30s linear infinite',
-              '@keyframes scroll': {
-                '0%': {
-                  transform: 'translateX(0)'
-                },
-                '100%': {
-                  transform: 'translateX(-50%)'
-                }
-              }
-            }}
-          >
-            {/* Duplicamos los logos para crear el efecto infinito */}
-            {[...Array(2)].map((_, i) => (
-              <Box
-                key={i}
-                sx={{
-                  display: 'flex',
-                  gap: 8,
-                  px: 4
-                }}
-              >
-                {[1, 2, 3, 4, 5, 6].map((num) => (
-                  <Box
-                    key={num}
-                    component="img"
-                    src={`/assets/medical-center-${num}.png`}
-                    alt={`Centro Médico ${num}`}
-                    sx={{
-                      height: 80,
-                      width: 'auto',
-                      filter: 'grayscale(100%)',
-                      opacity: 0.7,
-                      transition: 'all 0.3s ease',
-                      '&:hover': {
-                        filter: 'grayscale(0%)',
-                        opacity: 1
-                      }
-                    }}
-                  />
-                ))}
-              </Box>
-            ))}
-          </Box>
-        </Box>
-      </Container>
-      <Container maxWidth="lg" sx={{ py: 8 }}>
-        <Box sx={{ mb: 8 }}>
-          <Typography variant="h3" component="h2" align="center" gutterBottom>
-            Contáctanos
-          </Typography>
-          <Typography variant="h6" align="center" color="text.secondary" sx={{ mb: 6 }}>
-            Estamos aquí para ayudarte. ¡Ponte en contacto con nosotros!
-          </Typography>
+    {/* Impact Section */}
+    <section className="max-w-7xl mx-auto px-4 py-16">
+      <h2 className="text-3xl font-bold text-center mb-10">Nuestro Impacto</h2>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+        <div className="bg-white rounded-lg shadow p-8">
+          <div className="text-blue-900 text-4xl font-bold mb-2">150+</div>
+          <div className="text-lg font-semibold mb-1">Tecnólogos Activos</div>
+          <div className="text-gray-500">Profesionales calificados brindando servicios de calidad</div>
+        </div>
+        <div className="bg-white rounded-lg shadow p-8">
+          <div className="text-blue-900 text-4xl font-bold mb-2">50+</div>
+          <div className="text-lg font-semibold mb-1">Centros Médicos</div>
+          <div className="text-gray-500">Instituciones de salud confían en nuestra red</div>
+        </div>
+        <div className="bg-white rounded-lg shadow p-8">
+          <div className="text-blue-900 text-4xl font-bold mb-2">5000+</div>
+          <div className="text-lg font-semibold mb-1">Exámenes Realizados</div>
+          <div className="text-gray-500">Diagnósticos precisos entregados a pacientes</div>
+        </div>
+      </div>
+    </section>
 
-          <Grid container spacing={4}>
-            <Grid item xs={12} md={4}>
-              <Paper sx={{ p: 3, height: '100%', textAlign: 'center' }}>
-                <EmailIcon sx={{ fontSize: 40, color: 'primary.main', mb: 2 }} />
-                <Typography variant="h6" gutterBottom>
-                  Correo Electrónico
-                </Typography>
-                <Typography color="text.secondary">
-                  contacto@imageclec.com
-                </Typography>
-              </Paper>
-            </Grid>
+    {/* Contact Section */}
+    <section className="max-w-7xl mx-auto px-4 py-16">
+      <h2 className="text-3xl font-bold text-center mb-4">Contáctanos</h2>
+      <p className="text-lg text-center text-gray-600 mb-10">Estamos aquí para ayudarte. ¡Ponte en contacto con nosotros!</p>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+        <div className="bg-white rounded-lg shadow p-6 text-center flex flex-col items-center">
+          <span className="text-blue-900 text-4xl mb-2">📧</span>
+          <div className="font-semibold mb-1">Correo Electrónico</div>
+          <div className="text-gray-500">contacto@imageclec.com</div>
+        </div>
+        <div className="bg-white rounded-lg shadow p-6 text-center flex flex-col items-center">
+          <span className="text-blue-900 text-4xl mb-2">📞</span>
+          <div className="font-semibold mb-1">Teléfono</div>
+          <div className="text-gray-500">+34 912 345 678</div>
+        </div>
+        <div className="bg-white rounded-lg shadow p-6 text-center flex flex-col items-center">
+          <span className="text-blue-900 text-4xl mb-2">📍</span>
+          <div className="font-semibold mb-1">Dirección</div>
+          <div className="text-gray-500">Calle Principal 123, Madrid</div>
+        </div>
+      </div>
+      <form className="max-w-2xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
+        <input type="text" placeholder="Nombre" required className="col-span-1 md:col-span-2 border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400" />
+        <input type="email" placeholder="Correo electrónico" required className="col-span-1 md:col-span-2 border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400" />
+        <input type="text" placeholder="Asunto" required className="col-span-1 md:col-span-2 border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400" />
+        <textarea placeholder="Mensaje" required rows={4} className="col-span-1 md:col-span-2 border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400" />
+        <button type="submit" className="col-span-1 md:col-span-2 bg-blue-500 hover:bg-blue-400 text-white font-semibold py-3 px-8 rounded transition mt-2">Enviar Mensaje</button>
+      </form>
+    </section>
 
-            <Grid item xs={12} md={4}>
-              <Paper sx={{ p: 3, height: '100%', textAlign: 'center' }}>
-                <PhoneIcon sx={{ fontSize: 40, color: 'primary.main', mb: 2 }} />
-                <Typography variant="h6" gutterBottom>
-                  Teléfono
-                </Typography>
-                <Typography color="text.secondary">
-                  +34 912 345 678
-                </Typography>
-              </Paper>
-            </Grid>
-
-            <Grid item xs={12} md={4}>
-              <Paper sx={{ p: 3, height: '100%', textAlign: 'center' }}>
-                <LocationOnIcon sx={{ fontSize: 40, color: 'primary.main', mb: 2 }} />
-                <Typography variant="h6" gutterBottom>
-                  Dirección
-                </Typography>
-                <Typography color="text.secondary">
-                  Calle Principal 123, Madrid
-                </Typography>
-              </Paper>
-            </Grid>
-          </Grid>
-
-          <Box component="form" sx={{ mt: 8 }}>
-            <Grid container spacing={3}>
-              <Grid item xs={12} sm={6}>
-                <TextField
-                  required
-                  fullWidth
-                  label="Nombre"
-                  variant="outlined"
-                />
-              </Grid>
-              <Grid item xs={12} sm={6}>
-                <TextField
-                  required
-                  fullWidth
-                  label="Correo electrónico"
-                  variant="outlined"
-                  type="email"
-                />
-              </Grid>
-              <Grid item xs={12}>
-                <TextField
-                  required
-                  fullWidth
-                  label="Asunto"
-                  variant="outlined"
-                />
-              </Grid>
-              <Grid item xs={12}>
-                <TextField
-                  required
-                  fullWidth
-                  label="Mensaje"
-                  variant="outlined"
-                  multiline
-                  rows={4}
-                />
-              </Grid>
-              <Grid item xs={12}>
-                <Button
-                  variant="contained"
-                  size="large"
-                  fullWidth
-                  sx={{ mt: 2 }}
-                >
-                  Enviar Mensaje
-                </Button>
-              </Grid>
-            </Grid>
-          </Box>
-        </Box>
-
-        <Divider sx={{ my: 8 }} />
-
-        <Box sx={{ mb: 8 }}>
-          <Typography variant="h3" component="h2" align="center" gutterBottom>
-            Navegación
-          </Typography>
-          <Grid container spacing={4} sx={{ mt: 4 }}>
-            <Grid item xs={12} sm={6} md={3}>
-              <Typography variant="h6" gutterBottom>
-                Servicios
-              </Typography>
-              <List>
-                <ListItem disablePadding>
-                  <ListItemButton component={RouterLink} to="/radiologia">
-                    <ListItemText primary="Radiología" />
-                  </ListItemButton>
-                </ListItem>
-                <ListItem disablePadding>
-                  <ListItemButton component={RouterLink} to="/ecografia">
-                    <ListItemText primary="Ecografía" />
-                  </ListItemButton>
-                </ListItem>
-                <ListItem disablePadding>
-                  <ListItemButton component={RouterLink} to="/resonancia">
-                    <ListItemText primary="Resonancia Magnética" />
-                  </ListItemButton>
-                </ListItem>
-              </List>
-            </Grid>
-
-            <Grid item xs={12} sm={6} md={3}>
-              <Typography variant="h6" gutterBottom>
-                Pacientes
-              </Typography>
-              <List>
-                <ListItem disablePadding>
-                  <ListItemButton component={RouterLink} to="/citas">
-                    <ListItemText primary="Reservar Cita" />
-                  </ListItemButton>
-                </ListItem>
-                <ListItem disablePadding>
-                  <ListItemButton component={RouterLink} to="/preparacion">
-                    <ListItemText primary="Preparación Exámenes" />
-                  </ListItemButton>
-                </ListItem>
-                <ListItem disablePadding>
-                  <ListItemButton component={RouterLink} to="/resultados">
-                    <ListItemText primary="Resultados Online" />
-                  </ListItemButton>
-                </ListItem>
-              </List>
-            </Grid>
-
-            <Grid item xs={12} sm={6} md={3}>
-              <Typography variant="h6" gutterBottom>
-                Nosotros
-              </Typography>
-              <List>
-                <ListItem disablePadding>
-                  <ListItemButton component={RouterLink} to="/equipo">
-                    <ListItemText primary="Nuestro Equipo" />
-                  </ListItemButton>
-                </ListItem>
-                <ListItem disablePadding>
-                  <ListItemButton component={RouterLink} to="/tecnologia">
-                    <ListItemText primary="Tecnología" />
-                  </ListItemButton>
-                </ListItem>
-                <ListItem disablePadding>
-                  <ListItemButton component={RouterLink} to="/instalaciones">
-                    <ListItemText primary="Instalaciones" />
-                  </ListItemButton>
-                </ListItem>
-              </List>
-            </Grid>
-
-            <Grid item xs={12} sm={6} md={3}>
-              <Typography variant="h6" gutterBottom>
-                Legal
-              </Typography>
-              <List>
-                <ListItem disablePadding>
-                  <ListItemButton component={RouterLink} to="/privacidad">
-                    <ListItemText primary="Política de Privacidad" />
-                  </ListItemButton>
-                </ListItem>
-                <ListItem disablePadding>
-                  <ListItemButton component={RouterLink} to="/terminos">
-                    <ListItemText primary="Términos y Condiciones" />
-                  </ListItemButton>
-                </ListItem>
-                <ListItem disablePadding>
-                  <ListItemButton component={RouterLink} to="/cookies">
-                    <ListItemText primary="Política de Cookies" />
-                  </ListItemButton>
-                </ListItem>
-              </List>
-            </Grid>
-          </Grid>
-        </Box>
-      </Container>
-    </Box>
-  );
-};
+    {/* Navigation Section */}
+    <section className="max-w-7xl mx-auto px-4 py-16">
+      <h2 className="text-3xl font-bold text-center mb-8">Navegación</h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mt-4">
+        <div>
+          <h3 className="text-lg font-bold mb-2">Servicios</h3>
+          <ul className="space-y-1">
+            <li><Link to="/radiologia" className="text-blue-900 hover:underline">Radiología</Link></li>
+            <li><Link to="/ecografia" className="text-blue-900 hover:underline">Ecografía</Link></li>
+            <li><Link to="/resonancia" className="text-blue-900 hover:underline">Resonancia Magnética</Link></li>
+          </ul>
+        </div>
+        <div>
+          <h3 className="text-lg font-bold mb-2">Pacientes</h3>
+          <ul className="space-y-1">
+            <li><Link to="/citas" className="text-blue-900 hover:underline">Reservar Cita</Link></li>
+            <li><Link to="/preparacion" className="text-blue-900 hover:underline">Preparación Exámenes</Link></li>
+            <li><Link to="/resultados" className="text-blue-900 hover:underline">Resultados Online</Link></li>
+          </ul>
+        </div>
+        <div>
+          <h3 className="text-lg font-bold mb-2">Nosotros</h3>
+          <ul className="space-y-1">
+            <li><Link to="/equipo" className="text-blue-900 hover:underline">Nuestro Equipo</Link></li>
+            <li><Link to="/tecnologia" className="text-blue-900 hover:underline">Tecnología</Link></li>
+            <li><Link to="/instalaciones" className="text-blue-900 hover:underline">Instalaciones</Link></li>
+          </ul>
+        </div>
+        <div>
+          <h3 className="text-lg font-bold mb-2">Legal</h3>
+          <ul className="space-y-1">
+            <li><Link to="/privacidad" className="text-blue-900 hover:underline">Política de Privacidad</Link></li>
+            <li><Link to="/terminos" className="text-blue-900 hover:underline">Términos y Condiciones</Link></li>
+            <li><Link to="/cookies" className="text-blue-900 hover:underline">Política de Cookies</Link></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+);
 
 export default Home; 

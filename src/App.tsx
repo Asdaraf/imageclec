@@ -1,8 +1,6 @@
 // Importaciones de React y la librerias necesarias
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { ThemeProvider, createTheme } from '@mui/material/styles';
-import CssBaseline from '@mui/material/CssBaseline';
 
 // Importaciones de las páginas
 import Home from './pages/Home';
@@ -14,21 +12,8 @@ import Dashboard from './pages/Dashboard';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 
-const theme = createTheme({
-  palette: {
-    primary: {
-      main: '#1976d2',
-    },
-    secondary: {
-      main: '#dc004e',
-    },
-  },
-});
-
 function App() {
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
       <Router>
         <Navbar />
         <Routes>
@@ -39,7 +24,6 @@ function App() {
         </Routes>
         <Footer />
       </Router>
-    </ThemeProvider>
   );
 }
 
