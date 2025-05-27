@@ -7,6 +7,8 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Dashboard from './pages/Dashboard';
+import Test from './pages/Test';
+import Test2 from './pages/Test2';
 
 // Importaciones de los componentes
 import Navbar from './components/Navbar';

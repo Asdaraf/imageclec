@@ -3,7 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Footer = () => (
-  <footer className="bg-blue-900 text-white py-6 mt-12">
+  <footer className="bg-[#144A7B] text-white py-8 mt-12">
     <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between">
       <div className="mb-4 md:mb-0 text-center md:text-left">
         <span className="font-bold tracking-widest font-[Montserrat]">IMAGECLEC</span> &copy; {new Date().getFullYear()}

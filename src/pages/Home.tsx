@@ -1,15 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Heart, Building2, UserCheck } from 'lucide-react';
 
 const Home = () => (
-  <div>
+  <div className="bg-[#F5F7FA] text-[#1A1A1A]">
     {/* Hero Section */}
-    <section className="text-blue-900 py-16 text-center">
+    <section className="bg-white py-16 text-center">
       <div className="max-w-7xl mx-auto px-4">
         <div className="grid grid-cols-3 gap-8">
           <div className="col-span-2 flex flex-col items-start justify-between text-left">
             <h1 className="text-7xl md:text-7xl font-black mb-4">
-              Conectando Centros de Salud con Ecografistas
+              Conectando Centros de Salud con <span className="text-[#144A7B]">Ecografistas</span>
             </h1>
             <h2 className="text-xl md:text-2xl mb-6">
               La plataforma que facilita la conexión entre profesionales y centros médicos
@@ -25,7 +26,7 @@ const Home = () => (
             <img
               src="/assets/home-image.png"
               alt="Home"
-              className=""
+              className="w-full h-full object-cover rounded-lg"
             />
           </div>
         </div>
@@ -33,25 +34,40 @@ const Home = () => (
     </section>
 
     {/* Features Section */}
-    <section className="max-w-7xl mx-auto px-4 py-16">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-        <div className="bg-white rounded-lg shadow p-6">
-          <h3 className="text-xl font-bold mb-2">Para Centros de Salud</h3>
-          <p>Encuentra ecografistas calificados para cubrir tus necesidades de personal</p>
+    <section id="features" className="py-16 bg-[#F5F7FA]">
+        <div className="max-w-6xl mx-auto px-6">
+          <h3 className="text-3xl font-semibold text-center mb-12">¿Qué ofrece IMAGECLEC?</h3>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-white rounded-2xl shadow-md p-6 text-center">
+              <Heart className="mx-auto h-12 w-12 text-[#144A7B] mb-4" />
+              <h4 className="text-xl font-bold mb-2">Gestión eficiente</h4>
+              <p className="text-[#4A4A4A]">
+              Optimiza la gestión de exámenes y disponibilidad médica de manera simple.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-2xl shadow-md p-6 text-center">
+              <Building2 className="mx-auto h-12 w-12 text-[#144A7B] mb-4" />
+              <h4 className="text-xl font-bold mb-2">Centros de salud</h4>
+              <p className="text-[#4A4A4A]">
+                Publica disponibilidad de box e integra servicios médicos en minutos.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-2xl shadow-md p-6 text-center">
+              <UserCheck className="mx-auto h-12 w-12 text-[#144A7B] mb-4" />
+              <h4 className="text-xl font-bold mb-2">Ecografistas</h4>
+              <p className="text-[#4A4A4A]">
+                Encuentra oportunidades según tu especialidad y ubicación.
+              </p>
+            </div>
+          </div>
         </div>
-        <div className="bg-white rounded-lg shadow p-6">
-          <h3 className="text-xl font-bold mb-2">Para Ecografistas</h3>
-          <p>Encuentra oportunidades de trabajo en diferentes centros de salud</p>
-        </div>
-        <div className="bg-white rounded-lg shadow p-6">
-          <h3 className="text-xl font-bold mb-2">Proceso Simple</h3>
-          <p>Registro fácil, búsqueda rápida y conexión directa</p>
-        </div>
-      </div>
-    </section>
+      </section>
 
     {/* Impact Section */}
-    <section className="max-w-7xl mx-auto px-4 py-16">
+    <section className="px-4 py-16 bg-white">
+      <div className='max-w-7xl mx-auto'>
       <h2 className="text-3xl font-bold text-center mb-10">Nuestro Impacto</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
         <div className="bg-white rounded-lg shadow p-8">
@@ -70,7 +86,99 @@ const Home = () => (
           <div className="text-gray-500">Diagnósticos precisos entregados a pacientes</div>
         </div>
       </div>
+      </div>
+      
     </section>
+
+    {/* Partners Section */}
+    <section className="px-4 py-16 bg-white">
+      <div className='max-w-7xl mx-auto'>
+        <h2 className="text-3xl font-bold text-center mb-8">Nuestros Socios</h2>
+        <div className="relative overflow-hidden">
+          <div className="animate-scroll">
+            {/* Primera fila de logos */}
+            <div className="flex min-w-full justify-around items-center">
+              <div className="w-48 h-32 bg-white rounded-lg shadow-md p-4 flex items-center justify-center">
+                <img 
+                  src="/assets/partners/hospital1.png" 
+                  alt="Hospital 1"
+                  className="max-h-full max-w-full object-contain"
+                />
+              </div>
+              <div className="w-48 h-32 bg-white rounded-lg shadow-md p-4 flex items-center justify-center">
+                <img 
+                  src="/assets/partners/hospital2.png" 
+                  alt="Hospital 2"
+                  className="max-h-full max-w-full object-contain"
+                />
+              </div>
+              <div className="w-48 h-32 bg-white rounded-lg shadow-md p-4 flex items-center justify-center">
+                <img 
+                  src="/assets/partners/hospital3.png" 
+                  alt="Hospital 3"
+                  className="max-h-full max-w-full object-contain"
+                />
+              </div>
+              <div className="w-48 h-32 bg-white rounded-lg shadow-md p-4 flex items-center justify-center">
+                <img 
+                  src="/assets/partners/hospital4.png" 
+                  alt="Hospital 4"
+                  className="max-h-full max-w-full object-contain"
+                />
+              </div>
+            </div>
+            {/* Segunda fila de logos (duplicado para el efecto de scroll infinito) */}
+            <div className="flex min-w-full justify-around items-center">
+              <div className="w-48 h-32 bg-white rounded-lg shadow-md p-4 flex items-center justify-center">
+                <img 
+                  src="/assets/partners/hospital1.png" 
+                  alt="Hospital 1"
+                  className="max-h-full max-w-full object-contain"
+                />
+              </div>
+              <div className="w-48 h-32 bg-white rounded-lg shadow-md p-4 flex items-center justify-center">
+                <img 
+                  src="/assets/partners/hospital2.png" 
+                  alt="Hospital 2"
+                  className="max-h-full max-w-full object-contain"
+                />
+              </div>
+              <div className="w-48 h-32 bg-white rounded-lg shadow-md p-4 flex items-center justify-center">
+                <img 
+                  src="/assets/partners/hospital3.png" 
+                  alt="Hospital 3"
+                  className="max-h-full max-w-full object-contain"
+                />
+              </div>
+              <div className="w-48 h-32 bg-white rounded-lg shadow-md p-4 flex items-center justify-center">
+                <img 
+                  src="/assets/partners/hospital4.png" 
+                  alt="Hospital 4"
+                  className="max-h-full max-w-full object-contain"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+
+    
+
+    {/* CTA */}
+    <section className="bg-[#2F75B5] py-16 text-white text-center">
+        <div className="max-w-3xl mx-auto px-6">
+          <h3 className="text-3xl font-bold mb-4">¿Listo para transformar la atención médica?</h3>
+          <p className="text-lg mb-6">
+            Únete a IMAGECLEC y lleva tu gestión de imagenología al siguiente nivel.
+          </p>
+          <button className="bg-white text-[#144A7B] hover:text-[#2F75B5] px-6 py-3 text-lg rounded-xl transition-colors">
+            Crear cuenta gratuita
+          </button>
+        </div>
+      </section>
 
     {/* Contact Section */}
     <section className="max-w-7xl mx-auto px-4 py-16">
@@ -100,6 +208,46 @@ const Home = () => (
         <textarea placeholder="Mensaje" required rows={4} className="col-span-1 md:col-span-2 border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400" />
         <button type="submit" className="col-span-1 md:col-span-2 bg-blue-500 hover:bg-blue-400 text-white font-semibold py-3 px-8 rounded transition mt-2">Enviar Mensaje</button>
       </form>
+    </section>
+
+    {/* Partners Section */}
+    <section className="bg-white py-16">
+      <div className="max-w-7xl mx-auto px-4">
+        <h2 className="text-3xl font-bold text-center mb-8">Nuestras Alianzas</h2>
+        <p className="text-lg text-center text-gray-600 mb-12">
+          Orgullosos de colaborar con empresas líderes en el sector salud.
+        </p>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center">
+          <div className="w-40 h-24 bg-white flex items-center justify-center p-4">
+            <img 
+              src="/assets/partners/partner1.png" 
+              alt="Partner 1"
+              className="max-w-full max-h-full object-contain grayscale hover:grayscale-0 transition-all"
+            />
+          </div>
+          <div className="w-40 h-24 bg-white flex items-center justify-center p-4">
+            <img 
+              src="/assets/partners/partner2.png" 
+              alt="Partner 2"
+              className="max-w-full max-h-full object-contain grayscale hover:grayscale-0 transition-all"
+            />
+          </div>
+          <div className="w-40 h-24 bg-white flex items-center justify-center p-4">
+            <img 
+              src="/assets/partners/partner3.png" 
+              alt="Partner 3"
+              className="max-w-full max-h-full object-contain grayscale hover:grayscale-0 transition-all"
+            />
+          </div>
+          <div className="w-40 h-24 bg-white flex items-center justify-center p-4">
+            <img 
+              src="/assets/partners/partner4.png" 
+              alt="Partner 4"
+              className="max-w-full max-h-full object-contain grayscale hover:grayscale-0 transition-all"
+            />
+          </div>
+        </div>
+      </div>
     </section>
 
     {/* Navigation Section */}
