@@ -18,11 +18,46 @@ body {
 
 .animate-scroll {
   display: flex;
-  animation: scroll 30s linear infinite;
+  animation: scroll 10s linear infinite;
+  position: relative;
+
+  img {
+    transition: scale 0.3s;
+
+    &:hover {
+      scale: 1.1;
+    }
+  }
 }
 
-.animate-scroll:hover {
-  animation-play-state: paused;
+.relative {
+  &::after, &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 200px;
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  &::before {
+    left: 0;
+    background: linear-gradient(to right, 
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 255, 255, 0.8) 20%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  }
+
+  &::after {
+    right: 0;
+    background: linear-gradient(to left, 
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 255, 255, 0.8) 20%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  }
 }
 
 @keyframes scroll {

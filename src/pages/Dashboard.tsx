@@ -10,26 +10,26 @@ const Dashboard = () => {
         <div className="bg-white rounded-lg shadow p-6 flex flex-col">
           <h2 className="text-xl font-semibold mb-2">Perfil</h2>
           <p className="text-gray-600 mb-4">
-            Aquí podrás ver y editar tu información personal
+                  Aquí podrás ver y editar tu información personal
           </p>
           <Link
             to="/perfil"
             className="mt-auto inline-block bg-blue-500 hover:bg-blue-400 text-white font-semibold py-2 px-6 rounded transition"
           >
-            Ver Perfil
+                  Ver Perfil
           </Link>
         </div>
         {/* Tarjeta Oportunidades */}
         <div className="bg-white rounded-lg shadow p-6 flex flex-col">
           <h2 className="text-xl font-semibold mb-2">Oportunidades</h2>
           <p className="text-gray-600 mb-4">
-            Explora las oportunidades disponibles
+                  Explora las oportunidades disponibles
           </p>
           <Link
             to="/oportunidades"
             className="mt-auto inline-block bg-blue-500 hover:bg-blue-400 text-white font-semibold py-2 px-6 rounded transition"
           >
-            Ver Oportunidades
+                  Ver Oportunidades
           </Link>
         </div>
       </div>

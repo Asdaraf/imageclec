@@ -4,7 +4,7 @@ import { Heart, Building2, UserCheck } from 'lucide-react';
 
 const Home = () => (
   <div className="bg-[#F5F7FA] text-[#1A1A1A]">
-    {/* Hero Section */}
+      {/* Hero Section */}
     <section className="bg-white py-16 text-center">
       <div className="max-w-7xl mx-auto px-4">
         <div className="grid grid-cols-3 gap-8">
@@ -13,13 +13,13 @@ const Home = () => (
               Conectando Centros de Salud con <span className="text-[#144A7B]">Ecografistas</span>
             </h1>
             <h2 className="text-xl md:text-2xl mb-6">
-              La plataforma que facilita la conexión entre profesionales y centros médicos
+            La plataforma que facilita la conexión entre profesionales y centros médicos
             </h2>
             <Link
-              to="/register"
+            to="/register"
               className="inline-block bg-blue-500 hover:bg-blue-400 text-white font-semibold py-3 px-8 rounded transition mt-4"
-            >
-              Comenzar Ahora
+          >
+            Comenzar Ahora
             </Link>
           </div>
           <div className="col-span-1">
@@ -33,7 +33,7 @@ const Home = () => (
       </div>
     </section>
 
-    {/* Features Section */}
+      {/* Features Section */}
     <section id="features" className="py-16 bg-[#F5F7FA]">
         <div className="max-w-6xl mx-auto px-6">
           <h3 className="text-3xl font-semibold text-center mb-12">¿Qué ofrece IMAGECLEC?</h3>
@@ -94,68 +94,70 @@ const Home = () => (
     <section className="px-4 py-16 bg-white">
       <div className='max-w-7xl mx-auto'>
         <h2 className="text-3xl font-bold text-center mb-8">Nuestros Socios</h2>
-        <div className="relative overflow-hidden">
-          <div className="animate-scroll">
-            {/* Primera fila de logos */}
-            <div className="flex min-w-full justify-around items-center">
-              <div className="w-48 h-32 bg-white rounded-lg shadow-md p-4 flex items-center justify-center">
-                <img 
-                  src="/assets/partners/hospital1.png" 
-                  alt="Hospital 1"
-                  className="max-h-full max-w-full object-contain"
-                />
+        <div className="relative">
+          <div className="overflow-hidden">
+            <div className="animate-scroll">
+              {/* Primera fila de logos */}
+              <div className="flex min-w-full justify-around items-center">
+                <div className="w-48 h-32 bg-white p-4 flex items-center justify-center">
+                  <img 
+                    src="/assets/logo.png" 
+                    alt="Hospital 1"
+                    className="max-h-full max-w-full object-contain"
+                  />
+                </div>
+                <div className="w-48 h-32 bg-white p-4 flex items-center justify-center">
+                  <img 
+                    src="/assets/logo.png" 
+                    alt="Hospital 2"
+                    className="max-h-full max-w-full object-contain"
+                  />
+                </div>
+                <div className="w-48 h-32 bg-white p-4 flex items-center justify-center">
+                  <img 
+                    src="/assets/logo.png" 
+                    alt="Hospital 3"
+                    className="max-h-full max-w-full object-contain"
+                  />
+                </div>
+                <div className="w-48 h-32 bg-white p-4 flex items-center justify-center">
+                  <img 
+                    src="/assets/logo.png" 
+                    alt="Hospital 4"
+                    className="max-h-full max-w-full object-contain"
+                  />
+                </div>
               </div>
-              <div className="w-48 h-32 bg-white rounded-lg shadow-md p-4 flex items-center justify-center">
-                <img 
-                  src="/assets/partners/hospital2.png" 
-                  alt="Hospital 2"
-                  className="max-h-full max-w-full object-contain"
-                />
-              </div>
-              <div className="w-48 h-32 bg-white rounded-lg shadow-md p-4 flex items-center justify-center">
-                <img 
-                  src="/assets/partners/hospital3.png" 
-                  alt="Hospital 3"
-                  className="max-h-full max-w-full object-contain"
-                />
-              </div>
-              <div className="w-48 h-32 bg-white rounded-lg shadow-md p-4 flex items-center justify-center">
-                <img 
-                  src="/assets/partners/hospital4.png" 
-                  alt="Hospital 4"
-                  className="max-h-full max-w-full object-contain"
-                />
-              </div>
-            </div>
-            {/* Segunda fila de logos (duplicado para el efecto de scroll infinito) */}
-            <div className="flex min-w-full justify-around items-center">
-              <div className="w-48 h-32 bg-white rounded-lg shadow-md p-4 flex items-center justify-center">
-                <img 
-                  src="/assets/partners/hospital1.png" 
-                  alt="Hospital 1"
-                  className="max-h-full max-w-full object-contain"
-                />
-              </div>
-              <div className="w-48 h-32 bg-white rounded-lg shadow-md p-4 flex items-center justify-center">
-                <img 
-                  src="/assets/partners/hospital2.png" 
-                  alt="Hospital 2"
-                  className="max-h-full max-w-full object-contain"
-                />
-              </div>
-              <div className="w-48 h-32 bg-white rounded-lg shadow-md p-4 flex items-center justify-center">
-                <img 
-                  src="/assets/partners/hospital3.png" 
-                  alt="Hospital 3"
-                  className="max-h-full max-w-full object-contain"
-                />
-              </div>
-              <div className="w-48 h-32 bg-white rounded-lg shadow-md p-4 flex items-center justify-center">
-                <img 
-                  src="/assets/partners/hospital4.png" 
-                  alt="Hospital 4"
-                  className="max-h-full max-w-full object-contain"
-                />
+              {/* Segunda fila de logos (duplicado para el efecto de scroll infinito) */}
+              <div className="flex min-w-full justify-around items-center">
+                <div className="w-48 h-32 bg-white p-4 flex items-center justify-center">
+                  <img 
+                    src="/assets/logo.png" 
+                    alt="Hospital 1"
+                    className="max-h-full max-w-full object-contain"
+                  />
+                </div>
+                <div className="w-48 h-32 bg-white p-4 flex items-center justify-center">
+                  <img 
+                    src="/assets/logo.png" 
+                    alt="Hospital 2"
+                    className="max-h-full max-w-full object-contain"
+                  />
+                </div>
+                <div className="w-48 h-32 bg-white p-4 flex items-center justify-center">
+                  <img 
+                    src="/assets/logo.png" 
+                    alt="Hospital 3"
+                    className="max-h-full max-w-full object-contain"
+                  />
+                </div>
+                <div className="w-48 h-32 bg-white p-4 flex items-center justify-center">
+                  <img 
+                    src="/assets/logo.png" 
+                    alt="Hospital 4"
+                    className="max-h-full max-w-full object-contain"
+                  />
+                </div>
               </div>
             </div>
           </div>
