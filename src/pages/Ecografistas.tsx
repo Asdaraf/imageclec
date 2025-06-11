@@ -56,7 +56,7 @@ export default function Ecografistas() {
               <h3 className="text-xl font-bold mb-2">Más oportunidades</h3>
               <p className="text-gray-600">
                 Accede a una amplia red de centros médicos y encuentra el trabajo que mejor se adapte a tu perfil.
-              </p>
+        </p>
             </div>
             <div className="bg-[#F5F7FA] rounded-2xl p-8 shadow-lg">
               <Calendar className="h-12 w-12 text-[#144A7B] mb-4" />

@@ -2,19 +2,19 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Navbar = () => (
-  <nav className="bg-[#144A7B] py-8 shadow-md sticky top-0 z-50">
+  <nav className="bg-[#144A7B] py-2 shadow-md sticky top-0 z-50">
     <div className="max-w-7xl mx-auto flex items-center justify-between">
       <div className="flex items-center space-x-4">
         <img
           src="/assets/logo.png"
           alt="ImageClec Logo"
-          className="h-12 w-auto"
+          className="h-20 w-auto"
         />
-        <span className="text-white text-2xl font-bold tracking-widest font-[Montserrat]">
+        <span className="text-white text-3xl font-bold tracking-widest font-[Montserrat]">
           IMAGECLEC
         </span>
       </div>
-      <div className="space-x-6 text-lg">
+      <div className="space-x-6 text-2xl">
         <Link to="/" className="text-white hover:text-[#A7D3F3] transition">
           Inicio
         </Link>
