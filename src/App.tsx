@@ -7,8 +7,8 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Dashboard from './pages/Dashboard';
-import CentrosDeSalud from './pages/CentrosDeSalud';
-import Ecografistas from './pages/Ecografistas';
+import Test from './pages/Test';
+import Test2 from './pages/Test2';
 
 // Importaciones de los componentes
 import Navbar from './components/Navbar';
@@ -23,8 +23,6 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/centros-de-salud" element={<CentrosDeSalud />} />
-          <Route path="/ecografistas" element={<Ecografistas />} />
         </Routes>
         <Footer />
       </Router>

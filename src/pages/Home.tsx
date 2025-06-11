@@ -1,48 +1,33 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Heart, Building2, UserCheck, ArrowRight } from 'lucide-react';
+import { Heart, Building2, UserCheck } from 'lucide-react';
 
 const Home = () => (
   <div className="bg-[#F5F7FA] text-[#1A1A1A]">
       {/* Hero Section */}
-    <section className="bg-gradient-to-br from-white to-blue-50 py-20 text-center">
+    <section className="bg-white py-16 text-center">
       <div className="max-w-7xl mx-auto px-4">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-center">
-          <div className="lg:col-span-2 flex flex-col items-start justify-between text-left space-y-6">
-            <div className="space-y-4">
-              <h1 className="text-5xl lg:text-7xl font-black leading-tight">
-                Conectando Centros de Salud con <span className="text-[#144A7B]">Ecografistas</span>
-              </h1>
-              <h2 className="text-xl lg:text-2xl text-gray-600 font-medium">
+        <div className="grid grid-cols-3 gap-8">
+          <div className="col-span-2 flex flex-col items-start justify-between text-left">
+            <h1 className="text-7xl md:text-7xl font-black mb-4">
+              Conectando Centros de Salud con <span className="text-[#144A7B]">Ecografistas</span>
+            </h1>
+            <h2 className="text-xl md:text-2xl mb-6">
             La plataforma que facilita la conexión entre profesionales y centros médicos
-              </h2>
-            </div>
-            <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <Link 
-                to="/centros-de-salud"
-                className="group inline-flex items-center justify-center bg-[#144A7B] hover:bg-[#0D3A66] text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl"
-              >
-                Centros de Salud
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <Link 
-                to="/ecografistas" 
-                className="group inline-flex items-center justify-center bg-white hover:bg-gray-50 text-[#144A7B] font-semibold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl border-2 border-[#144A7B]"
-              >
-                Ecografistas
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-              </Link>
-            </div>
+            </h2>
+            <Link
+            to="/register"
+              className="inline-block bg-blue-500 hover:bg-blue-400 text-white font-semibold py-3 px-8 rounded transition mt-4"
+          >
+            Comenzar Ahora
+            </Link>
           </div>
-          <div className="lg:col-span-1">
-            <div className="relative">
-              <div className="absolute -inset-4 bg-gradient-to-r from-blue-100 to-blue-200 rounded-2xl transform rotate-3"></div>
-                <img
-                  src="/assets/home-image.png"
-                  alt="Home"
-                  className=" w-full h-full object-cover rounded-2xl shadow-2xl transform -rotate-3"
-                />
-            </div>
+          <div className="col-span-1">
+            <img
+              src="/assets/home-image.png"
+              alt="Home"
+              className="w-full h-full object-cover rounded-lg"
+            />
           </div>
         </div>
       </div>
