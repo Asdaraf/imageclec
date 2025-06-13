@@ -14,13 +14,13 @@ const Navbar = () => (
           IMAGECLEC
         </span>
       </div>
-      <div className="space-x-6 text-2xl">
+      <div className="space-x-6 text-xl">
         <Link to="/" className="text-white hover:text-[#A7D3F3] transition">
           Inicio
         </Link>
-        <Link to="/login" className="text-white hover:text-[#A7D3F3] transition">
+        {/*<Link to="/login" className="text-white hover:text-[#A7D3F3] transition">
           Iniciar Sesión
-        </Link>
+        </Link> */}
         <Link to="/register" className="text-white hover:text-[#A7D3F3] transition">
           Registrarse
         </Link>

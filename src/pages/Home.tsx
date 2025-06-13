@@ -25,13 +25,13 @@ const Home = () => (
                 Centros de Salud
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Link>
-              <Link 
+              {/*<Link 
                 to="/ecografistas" 
                 className="group inline-flex items-center justify-center bg-white hover:bg-gray-50 text-[#144A7B] font-semibold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl border-2 border-[#144A7B]"
               >
                 Ecografistas
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-              </Link>
+              </Link>*/}
             </div>
           </div>
           <div className="lg:col-span-1">
@@ -116,28 +116,28 @@ const Home = () => (
               <div className="flex min-w-full justify-around items-center">
                 <div className="w-48 h-32 bg-white p-4 flex items-center justify-center">
                   <img 
-                    src="/assets/logo.png" 
+                    src="/assets/centros-salud/FaceSalud-logo.webp" 
                     alt="Hospital 1"
                     className="max-h-full max-w-full object-contain"
                   />
                 </div>
                 <div className="w-48 h-32 bg-white p-4 flex items-center justify-center">
                   <img 
-                    src="/assets/logo.png" 
+                    src="/assets/centros-salud/mueveSalud-logo.png" 
                     alt="Hospital 2"
                     className="max-h-full max-w-full object-contain"
                   />
                 </div>
                 <div className="w-48 h-32 bg-white p-4 flex items-center justify-center">
                   <img 
-                    src="/assets/logo.png" 
+                    src="/assets/centros-salud/rojasalud-logo.png"
                     alt="Hospital 3"
                     className="max-h-full max-w-full object-contain"
                   />
                 </div>
                 <div className="w-48 h-32 bg-white p-4 flex items-center justify-center">
                   <img 
-                    src="/assets/logo.png" 
+                    src="/assets/centros-salud/drMiranda-logo.png" 
                     alt="Hospital 4"
                     className="max-h-full max-w-full object-contain"
                   />
@@ -147,28 +147,28 @@ const Home = () => (
               <div className="flex min-w-full justify-around items-center">
                 <div className="w-48 h-32 bg-white p-4 flex items-center justify-center">
                   <img 
-                    src="/assets/logo.png" 
+                    src="/assets/centros-salud/FaceSalud-logo.webp" 
                     alt="Hospital 1"
                     className="max-h-full max-w-full object-contain"
                   />
                 </div>
                 <div className="w-48 h-32 bg-white p-4 flex items-center justify-center">
                   <img 
-                    src="/assets/logo.png" 
+                    src="/assets/centros-salud/mueveSalud-logo.png" 
                     alt="Hospital 2"
                     className="max-h-full max-w-full object-contain"
                   />
                 </div>
                 <div className="w-48 h-32 bg-white p-4 flex items-center justify-center">
                   <img 
-                    src="/assets/logo.png" 
+                    src="/assets/centros-salud/rojasalud-logo.png" 
                     alt="Hospital 3"
                     className="max-h-full max-w-full object-contain"
                   />
                 </div>
                 <div className="w-48 h-32 bg-white p-4 flex items-center justify-center">
                   <img 
-                    src="/assets/logo.png" 
+                    src="/assets/centros-salud/drMiranda-logo.png" 
                     alt="Hospital 4"
                     className="max-h-full max-w-full object-contain"
                   />
@@ -228,16 +228,13 @@ const Home = () => (
     </section>
 
     {/* Partners Section */}
-    <section className="bg-white py-16">
+    <section className="bg-[#2F75B5] py-16">
       <div className="max-w-7xl mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-8">Nuestras Alianzas</h2>
-        <p className="text-lg text-center text-gray-600 mb-12">
-          Orgullosos de colaborar con empresas líderes en el sector salud.
-        </p>
+        <h2 className="text-3xl font-bold text-center mb-8">Partners</h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center">
           <div className="w-40 h-24 bg-white flex items-center justify-center p-4">
             <img 
-              src="/assets/partners/partner1.png" 
+              src="/assets/partners/aventia.png" 
               alt="Partner 1"
               className="max-w-full max-h-full object-contain grayscale hover:grayscale-0 transition-all"
             />
@@ -268,7 +265,7 @@ const Home = () => (
     </section>
 
     {/* Navigation Section */}
-    <section className="max-w-7xl mx-auto px-4 py-16">
+    <section className="max-w-7xl m-auto px-4 py-16">
       <h2 className="text-3xl font-bold text-center mb-8">Navegación</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mt-4">
         <div>
