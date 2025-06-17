@@ -142,6 +142,13 @@ const Home = () => (
                     className="max-h-full max-w-full object-contain"
                   />
                 </div>
+                <div className="w-48 h-32 bg-white p-4 flex items-center justify-center">
+                  <img 
+                    src="/assets/centros-salud/plusSalud.png" 
+                    alt="Hospital 5"
+                    className="max-h-full max-w-full object-contain"
+                  />
+                </div>
               </div>
               {/* Segunda fila de logos (duplicado para el efecto de scroll infinito) */}
               <div className="flex min-w-full justify-around items-center">
@@ -170,6 +177,13 @@ const Home = () => (
                   <img 
                     src="/assets/centros-salud/drMiranda-logo.png" 
                     alt="Hospital 4"
+                    className="max-h-full max-w-full object-contain"
+                  />
+                </div>
+                <div className="w-48 h-32 bg-white p-4 flex items-center justify-center">
+                  <img 
+                    src="/assets/centros-salud/plusSalud.png" 
+                    alt="Hospital 5"
                     className="max-h-full max-w-full object-contain"
                   />
                 </div>
@@ -231,33 +245,61 @@ const Home = () => (
     <section className="bg-[#2F75B5] py-16">
       <div className="max-w-7xl mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-8">Partners</h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center">
-          <div className="w-40 h-24 bg-white flex items-center justify-center p-4">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-1 items-center justify-items-center">
+          <div className="w-40 flex items-center justify-center p-2">
             <img 
               src="/assets/partners/aventia.png" 
               alt="Partner 1"
-              className="max-w-full max-h-full object-contain grayscale hover:grayscale-0 transition-all"
+              className="max-w-full max-h-full object-contain"
             />
           </div>
-          <div className="w-40 h-24 bg-white flex items-center justify-center p-4">
+          <div className="w-32 flex items-center justify-center p-2">
             <img 
-              src="/assets/partners/partner2.png" 
+              src="/assets/partners/aws.png" 
               alt="Partner 2"
-              className="max-w-full max-h-full object-contain grayscale hover:grayscale-0 transition-all"
+              className="max-w-full max-h-full object-contain"
             />
           </div>
-          <div className="w-40 h-24 bg-white flex items-center justify-center p-4">
+          <div className="w-64 flex items-center justify-center p-2">
             <img 
-              src="/assets/partners/partner3.png" 
+              src="/assets/partners/emprelatam.avif" 
               alt="Partner 3"
-              className="max-w-full max-h-full object-contain grayscale hover:grayscale-0 transition-all"
+              className="max-w-full max-h-full object-contain"
             />
           </div>
-          <div className="w-40 h-24 bg-white flex items-center justify-center p-4">
+          <div className="w-64 flex items-center justify-center p-2">
             <img 
-              src="/assets/partners/partner4.png" 
+              src="/assets/partners/visualmedica.webp" 
               alt="Partner 4"
-              className="max-w-full max-h-full object-contain grayscale hover:grayscale-0 transition-all"
+              className="max-w-full max-h-full object-contain"
+            />
+          </div>
+          <div className="w-32 flex items-center justify-center p-2">
+            <img 
+              src="/assets/partners/teleus.png" 
+              alt="Partner 5"
+              className="max-w-full max-h-full object-contain"
+            />
+          </div>
+          <div className="w-48 flex items-center justify-center p-2">
+            <img 
+              src="/assets/partners/cybersalud.svg" 
+              alt="Partner 6"
+              className="max-w-full max-h-full object-contain"
+            />
+          </div>
+          <div className="w-48 flex items-center justify-center p-2">
+            <img 
+              src="/assets/partners/kellu.avif" 
+              alt="Partner 7"
+              className="max-w-full max-h-full object-contain"
+            />
+          </div>
+          <div className="w-32 flex items-center justify-center p-2">
+            <img 
+              src="/assets/partners/quieroMiExamen.png" 
+              alt="Partner 8"
+              className="max-w-full max-h-full object-contain"
             />
           </div>
         </div>
