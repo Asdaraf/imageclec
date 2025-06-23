@@ -1,8 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Heart, Building2, UserCheck, ArrowRight } from 'lucide-react';
+import ContactForm from '../components/ContactForm';
 
-const Home = () => (
+const Home = () => {
+  const handleContactSubmit = (data: any) => {
+    console.log('Formulario enviado:', data);
+    // Aquí puedes agregar lógica adicional si es necesario
+  };
+
+  return (
   <div className="bg-[#F5F7FA] text-[#1A1A1A]">
       {/* Hero Section */}
     <section className="bg-gradient-to-br from-white to-blue-50 py-20 text-center">
@@ -102,7 +109,6 @@ const Home = () => (
         </div>
       </div>
       </div>
-      
     </section>
 
     {/* Partners Section */}
@@ -142,6 +148,13 @@ const Home = () => (
                     className="max-h-full max-w-full object-contain"
                   />
                 </div>
+                <div className="w-48 h-32 bg-white p-4 flex items-center justify-center">
+                  <img 
+                    src="/assets/centros-salud/plusSalud.png" 
+                    alt="Hospital 5"
+                    className="max-h-full max-w-full object-contain"
+                  />
+                </div>
               </div>
               {/* Segunda fila de logos (duplicado para el efecto de scroll infinito) */}
               <div className="flex min-w-full justify-around items-center">
@@ -173,16 +186,19 @@ const Home = () => (
                     className="max-h-full max-w-full object-contain"
                   />
                 </div>
+                <div className="w-48 h-32 bg-white p-4 flex items-center justify-center">
+                  <img 
+                    src="/assets/centros-salud/plusSalud.png" 
+                    alt="Hospital 4"
+                    className="max-h-full max-w-full object-contain"
+                  />
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-
-    
-
-    
 
     {/* CTA */}
     <section className="bg-[#2F75B5] py-16 text-white text-center">
@@ -198,33 +214,8 @@ const Home = () => (
       </section>
 
     {/* Contact Section */}
-    <section className="max-w-7xl mx-auto px-4 py-16">
-      <h2 className="text-3xl font-bold text-center mb-4">Contáctanos</h2>
-      <p className="text-lg text-center text-gray-600 mb-10">Estamos aquí para ayudarte. ¡Ponte en contacto con nosotros!</p>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-        <div className="bg-white rounded-lg shadow p-6 text-center flex flex-col items-center">
-          <span className="text-blue-900 text-4xl mb-2">📧</span>
-          <div className="font-semibold mb-1">Correo Electrónico</div>
-          <div className="text-gray-500">contacto@imageclec.com</div>
-        </div>
-        <div className="bg-white rounded-lg shadow p-6 text-center flex flex-col items-center">
-          <span className="text-blue-900 text-4xl mb-2">📞</span>
-          <div className="font-semibold mb-1">Teléfono</div>
-          <div className="text-gray-500">+34 912 345 678</div>
-        </div>
-        <div className="bg-white rounded-lg shadow p-6 text-center flex flex-col items-center">
-          <span className="text-blue-900 text-4xl mb-2">📍</span>
-          <div className="font-semibold mb-1">Dirección</div>
-          <div className="text-gray-500">Calle Principal 123, Madrid</div>
-        </div>
-      </div>
-      <form className="max-w-2xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
-        <input type="text" placeholder="Nombre" required className="col-span-1 md:col-span-2 border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400" />
-        <input type="email" placeholder="Correo electrónico" required className="col-span-1 md:col-span-2 border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400" />
-        <input type="text" placeholder="Asunto" required className="col-span-1 md:col-span-2 border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400" />
-        <textarea placeholder="Mensaje" required rows={4} className="col-span-1 md:col-span-2 border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400" />
-        <button type="submit" className="col-span-1 md:col-span-2 bg-blue-500 hover:bg-blue-400 text-white font-semibold py-3 px-8 rounded transition mt-2">Enviar Mensaje</button>
-      </form>
+      <section className="bg-gray-50 py-16">
+        <ContactForm onSubmit={handleContactSubmit} />
     </section>
 
     {/* Partners Section */}
@@ -232,30 +223,58 @@ const Home = () => (
       <div className="max-w-7xl mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-8">Partners</h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center">
-          <div className="w-40 h-24 bg-white flex items-center justify-center p-4">
+          <div className="w-40 h-24 flex items-center justify-center p-4">
             <img 
               src="/assets/partners/aventia.png" 
               alt="Partner 1"
               className="max-w-full max-h-full object-contain grayscale hover:grayscale-0 transition-all"
             />
           </div>
-          <div className="w-40 h-24 bg-white flex items-center justify-center p-4">
+          <div className="w-40 h-24 flex items-center justify-center p-4">
             <img 
-              src="/assets/partners/partner2.png" 
+              src="/assets/partners/aws.png" 
               alt="Partner 2"
               className="max-w-full max-h-full object-contain grayscale hover:grayscale-0 transition-all"
             />
           </div>
-          <div className="w-40 h-24 bg-white flex items-center justify-center p-4">
+          <div className="w-40 h-24 flex items-center justify-center p-4">
             <img 
-              src="/assets/partners/partner3.png" 
+              src="/assets/partners/cybersalud.svg" 
               alt="Partner 3"
               className="max-w-full max-h-full object-contain grayscale hover:grayscale-0 transition-all"
             />
           </div>
-          <div className="w-40 h-24 bg-white flex items-center justify-center p-4">
+          <div className="w-40 h-24 flex items-center justify-center p-4">
             <img 
-              src="/assets/partners/partner4.png" 
+              src="/assets/partners/emprelatam.avif" 
+              alt="Partner 4"
+              className="max-w-full max-h-full object-contain grayscale hover:grayscale-0 transition-all"
+            />
+          </div>
+          <div className="w-40 h-24 flex items-center justify-center p-4">
+            <img 
+              src="/assets/partners/kellu.avif" 
+              alt="Partner 4"
+              className="max-w-full max-h-full object-contain grayscale hover:grayscale-0 transition-all"
+            />
+          </div>
+          <div className="w-40 h-24 flex items-center justify-center p-4">
+            <img 
+              src="/assets/partners/quieroMiExamen.png" 
+              alt="Partner 4"
+              className="max-w-full max-h-full object-contain grayscale hover:grayscale-0 transition-all"
+            />
+          </div>
+          <div className="w-40 h-24 flex items-center justify-center p-4">
+            <img 
+              src="/assets/partners/teleus.png" 
+              alt="Partner 4"
+              className="max-w-full max-h-full object-contain grayscale hover:grayscale-0 transition-all"
+            />
+          </div>
+          <div className="w-40 h-24 flex items-center justify-center p-4">
+            <img 
+              src="/assets/partners/visualmedica.webp" 
               alt="Partner 4"
               className="max-w-full max-h-full object-contain grayscale hover:grayscale-0 transition-all"
             />
@@ -267,42 +286,11 @@ const Home = () => (
     {/* Navigation Section */}
     <section className="max-w-7xl m-auto px-4 py-16">
       <h2 className="text-3xl font-bold text-center mb-8">Navegación</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mt-4">
-        <div>
-          <h3 className="text-lg font-bold mb-2">Servicios</h3>
-          <ul className="space-y-1">
-            <li><Link to="/radiologia" className="text-blue-900 hover:underline">Radiología</Link></li>
-            <li><Link to="/ecografia" className="text-blue-900 hover:underline">Ecografía</Link></li>
-            <li><Link to="/resonancia" className="text-blue-900 hover:underline">Resonancia Magnética</Link></li>
-          </ul>
-        </div>
-        <div>
-          <h3 className="text-lg font-bold mb-2">Pacientes</h3>
-          <ul className="space-y-1">
-            <li><Link to="/citas" className="text-blue-900 hover:underline">Reservar Cita</Link></li>
-            <li><Link to="/preparacion" className="text-blue-900 hover:underline">Preparación Exámenes</Link></li>
-            <li><Link to="/resultados" className="text-blue-900 hover:underline">Resultados Online</Link></li>
-          </ul>
-        </div>
-        <div>
-          <h3 className="text-lg font-bold mb-2">Nosotros</h3>
-          <ul className="space-y-1">
-            <li><Link to="/equipo" className="text-blue-900 hover:underline">Nuestro Equipo</Link></li>
-            <li><Link to="/tecnologia" className="text-blue-900 hover:underline">Tecnología</Link></li>
-            <li><Link to="/instalaciones" className="text-blue-900 hover:underline">Instalaciones</Link></li>
-          </ul>
-        </div>
-        <div>
-          <h3 className="text-lg font-bold mb-2">Legal</h3>
-          <ul className="space-y-1">
-            <li><Link to="/privacidad" className="text-blue-900 hover:underline">Política de Privacidad</Link></li>
-            <li><Link to="/terminos" className="text-blue-900 hover:underline">Términos y Condiciones</Link></li>
-            <li><Link to="/cookies" className="text-blue-900 hover:underline">Política de Cookies</Link></li>
-          </ul>
-        </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mt-4">        
       </div>
     </section>
   </div>
 );
+};
 
 export default Home; 
