@@ -285,8 +285,29 @@ const Home = () => {
 
     {/* Navigation Section */}
     <section className="max-w-7xl m-auto px-4 py-16">
-      <h2 className="text-3xl font-bold text-center mb-8">Navegación</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mt-4">        
+      <h2 className="text-3xl font-bold text-center mb-8">Enlaces Útiles</h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-4">
+        <div className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow">
+          <h3 className="text-xl font-semibold mb-3 text-gray-800">Preguntas Frecuentes</h3>
+          <p className="text-gray-600 mb-4">Encuentra respuestas a las preguntas más comunes sobre nuestros servicios</p>
+          <Link to="/faq" className="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+            Ver FAQ
+          </Link>
+        </div>
+        <div className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow">
+          <h3 className="text-xl font-semibold mb-3 text-gray-800">Registro</h3>
+          <p className="text-gray-600 mb-4">Únete a nuestra plataforma como ecografista o centro de salud</p>
+          <Link to="/register" className="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+            Registrarse
+          </Link>
+        </div>
+        <div className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow">
+          <h3 className="text-xl font-semibold mb-3 text-gray-800">Contacto</h3>
+          <p className="text-gray-600 mb-4">¿Necesitas ayuda? Nuestro equipo está aquí para asistirte</p>
+          <a href="#contact" className="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+            Contactar
+          </a>
+        </div>
       </div>
     </section>
   </div>

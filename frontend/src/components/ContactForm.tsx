@@ -104,7 +104,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSubmit }) => {
   };
 
   return (
-    <div className="max-w-4xl mx-auto px-4">
+    <div id="contact" className="max-w-4xl mx-auto px-4">
       <h2 className="text-3xl font-bold text-center mb-8">Contáctanos</h2>
       <p className="text-center text-gray-600 mb-8">
         ¿Tienes alguna pregunta? Estamos aquí para ayudarte.

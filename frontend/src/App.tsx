@@ -7,7 +7,8 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Dashboard from './pages/Dashboard';
-import Test from './pages/Test';
+import FAQ from './pages/FAQ';
+import Contact from './pages/Contact';
 import Test2 from './pages/Test2';
 
 // Importaciones de los componentes
@@ -23,6 +24,8 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/faq" element={<FAQ />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
         <Footer />
       </Router>
