@@ -9,7 +9,7 @@ import Register from './pages/Register';
 import Dashboard from './pages/Dashboard';
 import FAQ from './pages/FAQ';
 import Contact from './pages/Contact';
-import Test2 from './pages/Test2';
+import Test2 from './pages/CentrosDeSalud';
 
 // Importaciones de los componentes
 import Navbar from './components/Navbar';
@@ -26,6 +26,7 @@ function App() {
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/centros-medicos" element={<Test2 />} />
         </Routes>
         <Footer />
       </Router>

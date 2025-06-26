@@ -8,7 +8,7 @@ const Navbar = () => (
         <img
           src="/assets/logo.png"
           alt="ImageClec Logo"
-          className="h-16 w-auto"
+          className="h-20 w-auto"
         />
         <span className="text-white text-2xl font-bold tracking-widest font-[Montserrat]">
           IMAGECLEC
@@ -18,11 +18,11 @@ const Navbar = () => (
         <Link to="/" className="text-white hover:text-[#A7D3F3] transition">
           Inicio
         </Link>
+        <Link to="/centros-medicos" className="text-white hover:text-[#A7D3F3] transition">
+          Centros Médicos
+        </Link>
         <Link to="/faq" className="text-white hover:text-[#A7D3F3] transition">
           FAQ
-        </Link>
-        <Link to="/contact" className="text-white hover:text-[#A7D3F3] transition">
-          Contacto
         </Link>
         {/*<Link to="/login" className="text-white hover:text-[#A7D3F3] transition">
           Iniciar Sesión
