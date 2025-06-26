@@ -78,38 +78,33 @@ const diferenciasTable = `
             <td class='border border-gray-300 px-3 py-2'>Ecógrafo</td>
             <td class='border border-gray-300 px-3 py-2'>$15.000.000<br>Pagando $960.000 mensuales por 18 meses</td>
             <td class='border border-gray-300 px-3 py-2'>$600.000 mensuales</td>
-            <td class='border border-gray-300 px-3 py-2'>Incluido por el 75% de la prestación</td>
+            <td rowspan='6' class='border border-gray-300 px-3 py-2'>Incluido por el 75% de la prestación</td>
             <td class='border border-gray-300 px-3 py-2'>Considerar el valor como un promedio, existen equipos desde los 10M hasta los 100M</td>
         </tr>
         <tr class='bg-gray-50'>
             <td class='border border-gray-300 px-3 py-2'>Mantenciones</td>
             <td class='border border-gray-300 px-3 py-2'>$40.000 mensuales</td>
-            <td class='border border-gray-300 px-3 py-2'>NO APLICA</td>
-            <td class='border border-gray-300 px-3 py-2'>Incluido por el 75% de la prestación</td>
+            <td class='border border-gray-300 px-3 py-2'>0</td>
             <td class='border border-gray-300 px-3 py-2'>Mantenciones preventivas se realizan una vez al año, en caso de falla se debe pagar el servicio de reparación</td>
         </tr>
         <tr>
             <td class='border border-gray-300 px-3 py-2'>Tecnólogo Médico</td>
             <td colspan='2' class='border border-gray-300 px-3 py-2'>25% de la prestación</td>
-            <td class='border border-gray-300 px-3 py-2'>Incluido por el 75% de la prestación</td>
             <td class='border border-gray-300 px-3 py-2'>De acuerdo al mercado laboral, los TM's que hacen ecografias cobran entre un 20% y 30% de la prestación o sueldo dijo sobre los 2M</td>
         </tr>
         <tr class='bg-gray-50'>
             <td class='border border-gray-300 px-3 py-2'>Radiólogos</td>
             <td colspan='2' class='border border-gray-300 px-3 py-2'>20% de la prestación</td>
-            <td class='border border-gray-300 px-3 py-2'>Incluido por el 75% de la prestación</td>
             <td class='border border-gray-300 px-3 py-2'>Generalmente los radiólogos piden un mínimo de ecografias mensuales (50) para comenzar a operar</td>
         </tr>
         <tr>
             <td class='border border-gray-300 px-3 py-2'>PACS</td>
             <td colspan='2' class='border border-gray-300 px-3 py-2'>$100.000 mensuales</td>
-            <td class='border border-gray-300 px-3 py-2'>Incluido por el 75% de la prestación</td>
             <td class='border border-gray-300 px-3 py-2'>Generalmente estas empresas mantienen un costo fijo hasta los 200 estudios en promedio, luego cobran alrededor de $500 a $1.000 por esstudio, sin considerar lista de trabajo, portal paciente, etc</td>
         </tr>
         <tr class='bg-gray-50'>
             <td class='border border-gray-300 px-3 py-2'>CRM</td>
             <td colspan='2' class='border border-gray-300 px-3 py-2'>Solo de agenda y atención de pacientes</td>
-            <td class='border border-gray-300 px-3 py-2'>Incluido por el 75% de la prestación</td>
             <td class='border border-gray-300 px-3 py-2'>Múltiples herramientas para mejorar la atención y ayudar en la toma de decisiones de la clínica, todo orientado a los datos obtenidos en la toma de ecografías</td>
         </tr>
         <tr>
@@ -158,7 +153,7 @@ const FAQ = () => {
     {
       id: 6,
       question: "Marcas de ecógrafos vendidos en Chile",
-      answer: "Existen una serie de marcas disponibles en Chile, las cuales tienen distintos orígenes de fabricación, entre ellas se encuentran.\nEquipos chinos: Mindray, Chison, Sonoscape, Vinno, Edan o Lanmage.\nMarcas clásicas y reconocidas: Siemens, Toshiba, General Electric o Phillips",
+      answer: "Existen una serie de marcas disponibles en Chile, las cuales tienen distintos orígenes de fabricación, entre ellas se encuentran.\nEquipos chinos: Minday, Chison, Sonoscape, Vinno, Edan o Lanmage.\nMarcas clásicas y reconocidas: Siemens, Toshiba, General Electric o Phillips",
       category: "Facturación"
     },
     {
@@ -275,10 +270,9 @@ const FAQ = () => {
               {openItems.includes(item.id) && (
                 <div className="px-6 pb-4">
                   <div className="border-t border-gray-200 pt-4">
-                    <div 
-                      className="text-gray-700 leading-relaxed whitespace-pre-wrap"
-                      dangerouslySetInnerHTML={{ __html: item.answer }}
-                    />
+                    <p className="text-gray-700 leading-relaxed whitespace-pre-line">
+                      {item.answer}
+                    </p>
                   </div>
                 </div>
               )}
@@ -302,7 +296,7 @@ const FAQ = () => {
               Contactar Soporte
             </a>
             <a
-              href="mailto:imageclec.cl@gmail.com"
+              href="mailto:soporte@imageclec.com"
               className="inline-flex items-center justify-center px-6 py-3 bg-white text-blue-600 font-semibold rounded-lg border border-blue-600 hover:bg-blue-50 transition-colors"
             >
               Enviar Email

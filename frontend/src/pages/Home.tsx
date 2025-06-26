@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Heart, Building2, UserCheck, ArrowRight } from 'lucide-react';
 import ContactForm from '../components/ContactForm';
+import SEOHead from '../components/SEOHead';
 
 const Home = () => {
   const handleContactSubmit = (data: any) => {
@@ -11,6 +12,13 @@ const Home = () => {
 
   return (
   <div className="bg-[#F5F7FA] text-[#1A1A1A]">
+      <SEOHead 
+        title="IMAGECLEC - Conectando Centros de Salud con Ecografistas"
+        description="Plataforma que facilita la conexión entre profesionales de imagenología y centros médicos. Optimiza la gestión de exámenes y disponibilidad médica."
+        keywords="centros de salud, ecografistas, imagenología, servicios médicos, gestión médica, ecografías, diagnóstico por imagen"
+        canonical="https://imageclec.com"
+      />
+      
       {/* Hero Section */}
     <section className="bg-gradient-to-br from-white to-blue-50 py-20 text-center">
       <div className="max-w-7xl mx-auto px-4">
@@ -26,7 +34,7 @@ const Home = () => {
             </div>
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Link 
-                to="/centros-de-salud"
+                to="/centros-medicos"
                 className="group inline-flex items-center justify-center bg-[#144A7B] hover:bg-[#0D3A66] text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl"
               >
                 Centros de Salud
