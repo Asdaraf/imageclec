@@ -158,7 +158,7 @@ const FAQ = () => {
     {
       id: 6,
       question: "Marcas de ecógrafos vendidos en Chile",
-      answer: "Existen una serie de marcas disponibles en Chile, las cuales tienen distintos orígenes de fabricación, entre ellas se encuentran.\nEquipos chinos: Minday, Chison, Sonoscape, Vinno, Edan o Lanmage.\nMarcas clásicas y reconocidas: Siemens, Toshiba, General Electric o Phillips",
+      answer: "Existen una serie de marcas disponibles en Chile, las cuales tienen distintos orígenes de fabricación, entre ellas se encuentran.\nEquipos chinos: Mindray, Chison, Sonoscape, Vinno, Edan o Lanmage.\nMarcas clásicas y reconocidas: Siemens, Toshiba, General Electric o Phillips",
       category: "Facturación"
     },
     {
@@ -216,7 +216,7 @@ const FAQ = () => {
         </div>
 
         {/* Filtros por categoría */}
-        <div className="mb-8">
+        {/*<div className="mb-8">
           <div className="flex flex-wrap justify-center gap-2">
             <button
               onClick={() => setSelectedCategory('Todos')}
@@ -242,7 +242,7 @@ const FAQ = () => {
               </button>
             ))}
           </div>
-        </div>
+        </div>*/}
 
         {/* Lista de FAQ */}
         <div className="space-y-4">
@@ -259,9 +259,9 @@ const FAQ = () => {
                   <h3 className="text-lg font-semibold text-gray-900 mb-1">
                     {item.question}
                   </h3>
-                  <span className="inline-block px-2 py-1 text-xs font-medium bg-blue-100 text-blue-800 rounded-full">
+                  {/*<span className="inline-block px-2 py-1 text-xs font-medium bg-blue-100 text-blue-800 rounded-full">
                     {item.category}
-                  </span>
+                  </span>*/}
                 </div>
                 <div className="ml-4">
                   {openItems.includes(item.id) ? (
@@ -276,7 +276,7 @@ const FAQ = () => {
                 <div className="px-6 pb-4">
                   <div className="border-t border-gray-200 pt-4">
                     <div 
-                      className="text-gray-700 leading-relaxed"
+                      className="text-gray-700 leading-relaxed whitespace-pre-wrap"
                       dangerouslySetInnerHTML={{ __html: item.answer }}
                     />
                   </div>
