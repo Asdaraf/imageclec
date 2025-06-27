@@ -10,6 +10,7 @@ import Dashboard from './pages/Dashboard';
 import FAQ from './pages/FAQ';
 import Contact from './pages/Contact';
 import Test2 from './pages/CentrosDeSalud';
+import Ecografistas from './pages/Ecografistas';
 
 // Importaciones de los componentes
 import Navbar from './components/Navbar';
@@ -27,6 +28,7 @@ function App() {
           <Route path="/faq" element={<FAQ />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/centros-medicos" element={<Test2 />} />
+          <Route path="/ecografistas" element={<Ecografistas />} />
         </Routes>
         <Footer />
       </Router>
