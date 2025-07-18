@@ -49,6 +49,9 @@ const Navbar = () => {
             {/*<Link to="/register" className="text-white hover:text-[#A7D3F3] transition-colors duration-200">
               Registrarse
             </Link>*/}
+            <Link to="/contact" className="hover:text-[#A7D3F3] transition-colors duration-200">
+              Contacto
+            </Link>
           </div>
 
           {/* Botón de menú móvil */}
