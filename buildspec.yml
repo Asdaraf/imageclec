@@ -1,0 +1,35 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      java: corretto17
+    commands:
+      - echo "Instalando dependencias..."
+      - cd backend
+      - chmod +x mvnw
+      
+  pre_build:
+    commands:
+      - echo "Preparando build..."
+      - cd backend
+      
+  build:
+    commands:
+      - echo "Construyendo aplicación..."
+      - cd backend
+      - ./mvnw clean package -DskipTests
+      - echo "Build completado"
+      
+  post_build:
+    commands:
+      - echo "Post-build completado"
+      - cd backend
+      - ls -la target/
+
+artifacts:
+  files:
+    - backend/target/imageclec-backend-0.0.1-SNAPSHOT.jar
+    - Procfile
+    - .ebextensions/**/*
+  discard-paths: no 
