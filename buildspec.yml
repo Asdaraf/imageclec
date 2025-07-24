@@ -6,7 +6,7 @@ phases:
       java: corretto17
     commands:
       - echo "Instalando dependencias..."
-      - chmod +x mvnw
+      - chmod +x backend/mvnw
       
   pre_build:
     commands:
@@ -15,13 +15,13 @@ phases:
   build:
     commands:
       - echo "Construyendo aplicación..."
-      - ./mvnw clean package -DskipTests
+      - ./backend/mvnw -f backend/pom.xml clean package -DskipTests
       - echo "Build completado"
       
   post_build:
     commands:
       - echo "Post-build completado"
-      - ls -la target/
+      - ls -la backend/target/
 
 artifacts:
   files:
