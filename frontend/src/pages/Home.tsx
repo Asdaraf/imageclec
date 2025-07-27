@@ -342,9 +342,9 @@ const Home = () => {
             <div className="bg-white rounded-2xl shadow-lg p-4 sm:p-6 text-center hover:shadow-xl transition-shadow border-t-4 border-[#144A7B]">
               <h3 className="text-lg sm:text-xl font-semibold mb-2 sm:mb-3 text-gray-800">Contacto</h3>
               <p className="text-sm sm:text-base text-gray-600 mb-3 sm:mb-4">¿Necesitas ayuda? Nuestro equipo está aquí para asistirte</p>
-              <a href="#contact" className="inline-block bg-[#144A7B] text-white px-4 sm:px-6 py-2 sm:py-3 rounded-xl hover:bg-[#0D3A66] transition-colors text-sm sm:text-base">
+              <Link to="/contact" className="inline-block bg-[#144A7B] text-white px-4 sm:px-6 py-2 sm:py-3 rounded-xl hover:bg-[#0D3A66] transition-colors text-sm sm:text-base">
                 Contactar
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -353,9 +353,9 @@ const Home = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="bg-[#F5F7FA] py-12 sm:py-16">
+      {/* <section id="contact" className="bg-[#F5F7FA] py-12 sm:py-16">
         <ContactForm onSubmit={handleContactSubmit} />
-      </section>
+      </section>*/}
     </div>
   );
 };

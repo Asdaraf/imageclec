@@ -30,12 +30,12 @@ export default function Contact() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
             {/* Contact Form */}
-            <div className="bg-white rounded-2xl shadow-lg p-6 sm:p-8">
+            {/*<div className="bg-white rounded-2xl shadow-lg p-6 sm:p-8">
               <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-[#144A7B]">
                 Envíanos un mensaje
               </h2>
               <ContactForm />
-            </div>
+            </div>*/}
 
             {/* Contact Information */}
             <div className="space-y-8">
