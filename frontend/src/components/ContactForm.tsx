@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { API_ENDPOINTS } from '../config/api';
 
 interface ContactFormData {
   name: string;
@@ -76,7 +77,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSubmit }) => {
 
     try {
       // Aquí conectaremos con el backend Java
-      const response = await fetch('/api/contact', {
+      const response = await fetch(API_ENDPOINTS.contact, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
