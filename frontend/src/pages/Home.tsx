@@ -353,9 +353,9 @@ const Home = () => {
       </section>
 
       {/* Contact Section */}
-      {/* <section id="contact" className="bg-[#F5F7FA] py-12 sm:py-16">
+      <section id="contact" className="bg-[#F5F7FA] py-12 sm:py-16">
         <ContactForm onSubmit={handleContactSubmit} />
-      </section>*/}
+      </section>
     </div>
   );
 };
