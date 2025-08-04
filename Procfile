@@ -1,1 +1,1 @@
-web: java -jar backend/target/imageclec-backend-0.0.1-SNAPSHOT.jar 
+web: java -Dspring.profiles.active=prod -jar backend/target/imageclec-backend-0.0.1-SNAPSHOT.jar 

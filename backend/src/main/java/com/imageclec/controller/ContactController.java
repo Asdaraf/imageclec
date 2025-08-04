@@ -19,6 +19,15 @@ public class ContactController {
     @Autowired
     private ContactService contactService;
     
+    @GetMapping("/")
+    public ResponseEntity<Map<String, String>> root() {
+        Map<String, String> response = new HashMap<>();
+        response.put("status", "OK");
+        response.put("message", "ImageCLEc Backend API");
+        response.put("version", "1.0.0");
+        return ResponseEntity.ok(response);
+    }
+    
     @PostMapping("/contact")
     public ResponseEntity<Map<String, Object>> submitContact(@Valid @RequestBody ContactRequest request) {
         try {
@@ -44,6 +53,15 @@ public class ContactController {
         Map<String, String> response = new HashMap<>();
         response.put("status", "OK");
         response.put("message", "Backend funcionando correctamente");
+        return ResponseEntity.ok(response);
+    }
+    
+    @GetMapping("/test")
+    public ResponseEntity<Map<String, String>> test() {
+        Map<String, String> response = new HashMap<>();
+        response.put("status", "OK");
+        response.put("message", "Test endpoint funcionando");
+        response.put("timestamp", String.valueOf(System.currentTimeMillis()));
         return ResponseEntity.ok(response);
     }
 } 
