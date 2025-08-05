@@ -76,6 +76,9 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSubmit }) => {
     setSubmitStatus('idle');
 
     try {
+      console.log('Enviando petición a:', API_ENDPOINTS.contact);
+      console.log('Datos del formulario:', formData);
+      
       // Aquí conectaremos con el backend Java
       const response = await fetch(API_ENDPOINTS.contact, {
         method: 'POST',
@@ -85,7 +88,11 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSubmit }) => {
         body: JSON.stringify(formData)
       });
 
+      console.log('Respuesta del servidor:', response.status, response.statusText);
+      
       if (response.ok) {
+        const responseData = await response.json();
+        console.log('Datos de respuesta:', responseData);
         setSubmitStatus('success');
         setFormData({ name: '', email: '', subject: '', message: '' });
         
@@ -94,7 +101,9 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSubmit }) => {
           onSubmit(formData);
         }
       } else {
-        throw new Error('Error en el servidor');
+        const errorText = await response.text();
+        console.error('Error del servidor:', response.status, errorText);
+        throw new Error(`Error en el servidor: ${response.status} - ${errorText}`);
       }
     } catch (error) {
       console.error('Error al enviar formulario:', error);
