@@ -28,46 +28,45 @@ public class ContactService {
         
         ContactMessage savedMessage = contactMessageRepository.save(contactMessage);
         
-        // Enviar email de notificación
-        sendNotificationEmail(savedMessage);
-
-        // Enviar email de notificación al usuario
-        sendEmailToUser(savedMessage);
+        // Enviar emails de forma asíncrona para no bloquear la respuesta
+        try {
+            // Enviar email de notificación
+            sendNotificationEmail(savedMessage);
+        } catch (Exception e) {
+            System.err.println("Error enviando email de notificación: " + e.getMessage());
+        }
+        
+        try {
+            // Enviar email de notificación al usuario
+            sendEmailToUser(savedMessage);
+        } catch (Exception e) {
+            System.err.println("Error enviando email al usuario: " + e.getMessage());
+        }
         
         return savedMessage;
     }
     
     private void sendNotificationEmail(ContactMessage contactMessage) {
-        try {
-            SimpleMailMessage message = new SimpleMailMessage();
-            message.setTo("imageclec.cl@gmail.com"); // Email de destino
-            message.setSubject("Nuevo mensaje de contacto: " + contactMessage.getSubject());
-            message.setText(
-                "Has recibido un nuevo mensaje de contacto:\n\n" +
-                "Nombre: " + contactMessage.getName() + "\n" +
-                "Email: " + contactMessage.getEmail() + "\n" +
-                "Asunto: " + contactMessage.getSubject() + "\n" +
-                "Mensaje: " + contactMessage.getMessage() + "\n\n" +
-                "Fecha: " + contactMessage.getCreatedAt()
-            );
-            
-            mailSender.send(message);
-        } catch (Exception e) {
-            // Log del error pero no fallar la operación principal
-            System.err.println("Error enviando email: " + e.getMessage());
-        }
+        SimpleMailMessage message = new SimpleMailMessage();
+        message.setTo("imageclec.cl@gmail.com"); // Email de destino
+        message.setSubject("Nuevo mensaje de contacto: " + contactMessage.getSubject());
+        message.setText(
+            "Has recibido un nuevo mensaje de contacto:\n\n" +
+            "Nombre: " + contactMessage.getName() + "\n" +
+            "Email: " + contactMessage.getEmail() + "\n" +
+            "Asunto: " + contactMessage.getSubject() + "\n" +
+            "Mensaje: " + contactMessage.getMessage() + "\n\n" +
+            "Fecha: " + contactMessage.getCreatedAt()
+        );
+        
+        mailSender.send(message);
     }
 
     private void sendEmailToUser(ContactMessage contactMessage) {
-        try {
-            SimpleMailMessage message = new SimpleMailMessage();
-            message.setTo(contactMessage.getEmail());
-            message.setSubject("Gracias por contactarnos");
-            message.setText("Gracias por comunicarse con IMAGECLEC. Nos pondremos en contacto contigo lo antes posible.");
-            mailSender.send(message);
-        } catch (Exception e) {
-            // Log del error pero no fallar la operación principal
-            System.err.println("Error enviando email: " + e.getMessage());
-        }
+        SimpleMailMessage message = new SimpleMailMessage();
+        message.setTo(contactMessage.getEmail());
+        message.setSubject("Gracias por contactarnos");
+        message.setText("Gracias por comunicarse con IMAGECLEC. Nos pondremos en contacto contigo lo antes posible.");
+        mailSender.send(message);
     }
 } 
