@@ -38,12 +38,4 @@ public class ContactController {
             return ResponseEntity.badRequest().body(response);
         }
     }
-    
-    @GetMapping("/health")
-    public ResponseEntity<Map<String, String>> healthCheck() {
-        Map<String, String> response = new HashMap<>();
-        response.put("status", "OK");
-        response.put("message", "Backend funcionando correctamente");
-        return ResponseEntity.ok(response);
-    }
 } 
